@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- PowerSearch 128×128 — white rounded-square background for extensions page & web store -->
+  <rect width="128" height="128" rx="24" fill="white"/>
+  <!-- Green filled lens -->
+  <circle cx="52" cy="50" r="30" fill="#22C55E"/>
+  <!-- White + sign -->
+  <line x1="52" y1="34" x2="52" y2="66" stroke="white" stroke-width="9" stroke-linecap="round"/>
+  <line x1="36" y1="50" x2="68" y2="50" stroke="white" stroke-width="9" stroke-linecap="round"/>
+  <!-- Green handle -->
+  <line x1="74" y1="72" x2="110" y2="108" stroke="#22C55E" stroke-width="9" stroke-linecap="round"/>
+</svg>

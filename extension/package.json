@@ -1,0 +1,49 @@
+{
+  "name": "powersearch",
+  "private": true,
+  "version": "1.0.4",
+  "description": "Lightning-fast tab and history search Chrome Manifest V3 extension",
+  "author": "Husain",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/husain3012/PowerSearch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/husain3012/PowerSearch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/husain3012/PowerSearch/issues"
+  },
+  "keywords": [
+    "chrome-extension",
+    "tab-search",
+    "tab-manager",
+    "history-search",
+    "manifest-v3",
+    "productivity",
+    "preact"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "package": "rm -rf dist && npm run build && cd dist && zip -r ../../tab-search-manager-powersearch-v1.0.4.zip .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "preact": "^10.20.1"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.23",
+    "@preact/preset-vite": "^2.8.1",
+    "@types/chrome": "^0.0.268",
+    "@vitest/coverage-v8": "^4.1.7",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vitest": "^4.1.7"
+  }
+}

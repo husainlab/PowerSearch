@@ -6,7 +6,7 @@ Last Updated: May 14, 2026
 By installing, accessing, or using PowerSearch, you agree to these Terms and Conditions.
 
 ## License Grant
-We grant you a limited, non-exclusive, non-transferable, revocable license to use PowerSearch for your personal or internal business use, subject to these terms.
+The underlying source code of PowerSearch is licensed under the open-source MIT License. Use of precompiled distributions from the Chrome Web Store or other browser extension stores is granted free of charge for personal and commercial use, subject to these terms.
 
 ## Prohibited Use
 You agree not to:

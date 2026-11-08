@@ -1,33 +1,47 @@
-# Power Search Support
+# PowerSearch Support
 
 ## Getting Help
 
-If you hit a bug, activation issue, or device-limit problem, contact developer via mail - husainlabwork@gmail.com.
+If you run into an issue, find a bug, or have a feature request:
 
-## Include These Details
+1. **GitHub Issues**: Open an issue on [GitHub Issues](https://github.com/husain3012/PowerSearch/issues). This is the fastest way to get help, track bugs, and discuss enhancements.
+2. **Email Support**: You can also contact the developer directly at `husainlabwork@gmail.com`.
 
-When you report an issue, include:
+## When Reporting an Issue
 
-1. Your operating system.
-2. Your browser and version.
-3. Whether you are using the free tier or Pro.
-4. The exact error message shown by the extension or LemonSqueezy.
-5. Steps to reproduce the problem.
+To help diagnose and fix problems quickly, please include:
 
-## License and Activation FAQ
+1. Your operating system (e.g., macOS 14 Sonoma, Windows 11, Ubuntu 22.04).
+2. Your browser and version (e.g., Chrome 124, Edge 124, Brave 1.65).
+3. The exact steps to reproduce the issue.
+4. What you expected to happen versus what actually happened.
+5. Any console error messages:
+   - Go to `chrome://extensions`
+   - Enable **Developer mode** (top right toggle)
+   - Click **Inspect views: service worker** or inspect the popup to check for console errors.
 
-**Q: How many devices can I use with one Pro license key**?A: One license key supports up to 5 browser profile activations.
+## Frequently Asked Questions
 
-**Q: What counts as a device**?A: In practice, the activation is tied to a browser profile instance. A new Chrome profile, browser reinstall, or extension reinstall can consume another slot if the old activation was not deactivated first.
+### Q: Why does PowerSearch request permission to read page content?
+PowerSearch performs real-time, local full-text search across all your open tabs. To locate text matches across tab bodies and highlight them when you click a result, the extension requires host access (`<all_urls>`).
 
-**Q: What happens if I uninstall without deactivating**?A: That activation slot can remain consumed. Always deactivate the device from Settings before uninstalling the extension or browser.
+**All search queries, tab contents, and browsing history stay 100% local to your device.** Nothing is ever transmitted to remote servers.
 
-**Q: Can you reset lost activation slots**?A: If you lost slots because a device was removed without deactivation, contact support and include your LemonSqueezy order details.
+### Q: Why can't PowerSearch search internal browser pages?
+Chromium security policies prevent extensions from injecting scripts into privileged browser URLs (such as `chrome://`, `edge://`, `brave://`, `about:`, Chrome Web Store pages, and the native Chrome PDF viewer).
 
-**Q: Why does the extension ask to read page content**?A: That permission is required to perform local full-text search across your open tabs. Tab contents are not uploaded to our servers.
+### Q: How do I change or assign the keyboard shortcut?
+You can customize the shortcut anytime:
+- **Chrome**: Open `chrome://extensions/shortcuts`
+- **Edge**: Open `edge://extensions/shortcuts`
+- **Brave**: Open `brave://extensions/shortcuts`
 
-**Q: Why is my license key not activating**?A: Common reasons include an incorrect key, a key for a different product, or all 5 activation slots already being used.
+Find **PowerSearch** and click the pencil icon next to **Open PowerSearch** to assign your desired key combination (default: `Ctrl+Shift+F` on Windows/Linux or `Command+Shift+F` on macOS).
 
-## Business and Legal
+### Q: How do I toggle between Floating Popup Mode and Sidebar Mode?
+Open the PowerSearch Settings panel (gear icon in the top right of the search bar) and select your preferred **Open Mode**:
+- **Floating Popup**: Fast and keyboard-friendly. Opens as a popup, navigates to results, and closes automatically.
+- **Sidebar (Side Panel)**: Persistent side panel that remains open alongside web pages while you browse and switch between tabs.
 
-For legal, billing, refund, privacy, or terms questions, refer to the published privacy policy and terms documentation shipped with the project.
+### Q: How does local caching work?
+Extracted page text is cached in browser session storage with an LRU limit of 50 tabs and a 5-minute TTL. The cache is automatically cleared when a tab is closed or when the browser restarts.
